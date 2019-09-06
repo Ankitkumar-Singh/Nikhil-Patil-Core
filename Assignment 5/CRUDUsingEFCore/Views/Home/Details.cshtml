@@ -1,0 +1,46 @@
+﻿@model CRUDUsingEFCore.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="col-md-6 offset-md-3">
+    <h4>Employee Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+    </dl>
+    <div class="float-right">
+        <a asp-action="Index" class="btn btn-info">Back to List</a>
+        <a asp-action="Save" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    </div>
+</div>
